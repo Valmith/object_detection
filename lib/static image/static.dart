@@ -38,7 +38,7 @@ class _StaticImageState extends State<StaticImage> {
     );
   }
 
-  // this function detects the objects on the image
+  // this function is the Object detection
   detectObject(File image) async {
     var recognitions = await Tflite.detectObjectOnImage(
         path: image.path, // required
