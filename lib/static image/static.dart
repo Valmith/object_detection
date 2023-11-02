@@ -62,6 +62,8 @@ class _StaticImageState extends State<StaticImage> {
     });
   }
 
+
+
   // display the bounding boxes over the detected objects
   List<Widget> renderBoxes(Size screen) {
     if (_recognitions == null) return [];
@@ -72,6 +74,8 @@ class _StaticImageState extends State<StaticImage> {
 
     Color blue = Colors.blue;
 
+   
+//re is the placeholder for the detected stuff
     return _recognitions!.map((re) {
       return Container(
         child: Positioned(
@@ -88,6 +92,7 @@ class _StaticImageState extends State<StaticImage> {
                     )),
                     child: Text(
                       "${re["detectedClass"]} ${(re["confidenceInClass"] * 100).toStringAsFixed(0)}%",
+//cobine the re into one string that is seperated by comma
                       style: TextStyle(
                         background: Paint()..color = blue,
                         color: Colors.white,

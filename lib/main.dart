@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:object_detection/realtime/live_camera.dart';
+// import 'package:object_detection/realtime/live_camera.dart';
 import 'package:object_detection/static%20image/static.dart';
 
 List<CameraDescription> cameras = [];
@@ -53,6 +53,7 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              
               ButtonTheme(
                 minWidth: 170,
                 child: ElevatedButton(
@@ -68,20 +69,23 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
               
-              ButtonTheme(
-                minWidth: 160,
-                child: ElevatedButton(
-                  child: Text("Real Time Detection"),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => LiveFeed(cameras),
-                      ),
-                    );
-                  },
-                ),
-              ),
+            // this was for the live feed
+
+              // ButtonTheme(
+              //   minWidth: 160,
+              //   child: ElevatedButton(
+              //     child: Text("Real Time Detection"),
+              //     onPressed: () {
+              //       Navigator.push(
+              //         context,
+              //         MaterialPageRoute(
+              //           builder: (context) => LiveFeed(cameras),
+              //         ),
+              //       );
+              //     },
+              //   ),
+              // ),
+
             ],
           ),
         ),

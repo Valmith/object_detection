@@ -1,7 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:object_detection/realtime/bounding_box.dart';
-import 'package:object_detection/realtime/camera.dart';
+import 'package:object_detection/realtime%20(to%20be%20taken%20out)/bounding_box.dart';
+import 'package:object_detection/realtime%20(to%20be%20taken%20out)/camera.dart';
 import 'dart:math' as math;
 // import 'package:flutter_tflite/flutter_tflite.dart';
 import 'package:tflite/tflite.dart';
