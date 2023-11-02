@@ -1,4 +1,46 @@
-chili peppers
-garlic
-potatoes
-red onion
+item {
+  id: 1
+  name: 'chili peppers'
+}
+
+item {
+  id: 2
+  name: 'potatoes'
+}
+
+item {
+  id: 3
+  name: 'red onion'
+}
+
+item {
+  id: 4
+  name: 'garlic'
+}
+
+item {
+  id: 5
+  name: 'bok choy'
+}
+
+item {
+  id: 6
+  name: 'eggplant'
+}
+
+item {
+  id: 7
+  name: 'ginger'
+}
+
+item {
+  id: 8
+  name: 'green onion'
+}
+
+
+item {
+  id: 9
+  name: 'free range eggs'
+}
+
