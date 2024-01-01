@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
       applicationLegalese: "By Rupak Karki and built on by KV laurea",
       applicationVersion: "1.1",
       children: <Widget>[
-        Text("In Alpha Development"),
+        Text("In Development"),
       ],
     );
   }
@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Object Detector App"),
+        title: Text("Object Detector Module"),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.info),
@@ -69,7 +69,7 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
               
-            // this was for the live feed
+            // this was for the live camera button
 
               // ButtonTheme(
               //   minWidth: 160,

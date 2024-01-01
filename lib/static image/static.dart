@@ -9,6 +9,19 @@ class StaticImage extends StatefulWidget {
   _StaticImageState createState() => _StaticImageState();
 }
 
+//for recognized data in recognitions
+class RecognitionData {
+  RecognitionData(this.x, this.y, this.width, this.height, this.detectedClass, this.confidence);
+
+  final double confidence;
+  final String detectedClass;
+  final double height;
+  final double width;
+  final double x;
+  final double y;
+}
+
+
 class _StaticImageState extends State<StaticImage> {
   final picker = ImagePicker();
 
@@ -18,6 +31,7 @@ class _StaticImageState extends State<StaticImage> {
   List? _recognitions;
 
   @override
+  //initializes the whole thingy
   void initState() {
     super.initState();
     _busy = true;
@@ -62,9 +76,7 @@ class _StaticImageState extends State<StaticImage> {
     });
   }
 
-
-
-  // display the bounding boxes over the detected objects
+  // display the bounding boxes over the detected objects and get recog
   List<Widget> renderBoxes(Size screen) {
     if (_recognitions == null) return [];
     if (_imageWidth == null || _imageHeight == null) return [];
@@ -73,9 +85,8 @@ class _StaticImageState extends State<StaticImage> {
     double factorY = _imageHeight! / _imageWidth! * screen.width;
 
     Color blue = Colors.blue;
-
-   
 //re is the placeholder for the detected stuff
+// code for recognition from image
     return _recognitions!.map((re) {
       return Container(
         child: Positioned(
@@ -92,7 +103,6 @@ class _StaticImageState extends State<StaticImage> {
                     )),
                     child: Text(
                       "${re["detectedClass"]} ${(re["confidenceInClass"] * 100).toStringAsFixed(0)}%",
-//cobine the re into one string that is seperated by comma
                       style: TextStyle(
                         background: Paint()..color = blue,
                         color: Colors.white,
@@ -139,7 +149,7 @@ class _StaticImageState extends State<StaticImage> {
     List<Widget> stackChildren = [];
 
     stackChildren.add(Positioned(
-      // using ternary operator
+      // main Ui to select an image from device or camera
       child: _image == null
           ? Container(
               child: Column(
@@ -162,7 +172,7 @@ class _StaticImageState extends State<StaticImage> {
       ));
     }
 
-//scaffold UI
+// UI in how to get the image
     return Scaffold(
       appBar: AppBar(
         title: Text("Object Detector"),
