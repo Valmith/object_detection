@@ -87,9 +87,11 @@ class _StaticImageState extends State<StaticImage> {
     Color blue = Colors.blue;
 //re is the placeholder for the detected stuff
 // code for recognition from image
+// From this placeholder we need to edit the codes up to the next end
     return _recognitions!.map((re) {
       return Container(
         child: Positioned(
+          //bounding box
             left: re["rect"]["x"] * factorX,
             top: re["rect"]["y"] * factorY,
             width: re["rect"]["w"] * factorX,
@@ -114,6 +116,10 @@ class _StaticImageState extends State<StaticImage> {
       );
     }).toList();
   }
+//end
+// with re, we need to convert it to a string 
+// send the string to the meal planner module
+
 
   // gets image from camera and runs detectObject
   Future getImageFromCamera() async {
