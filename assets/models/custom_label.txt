@@ -1,5 +1,5 @@
-chili peppers
 bok choy
+chili peppers
 potatoes
 red onion
 garlic
@@ -8,5 +8,3 @@ ginger
 green onion
 free range eggs
 tomatoes
-
-
